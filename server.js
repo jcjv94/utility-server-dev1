@@ -17,7 +17,7 @@
 // const testmail = require("./utils/confirmEmail");
 require('express-async-errors');
 const express = require("express");
-const logger = require('./utils/loggerSetup');
+// const logger = require('./utils/loggerSetup');
 const cors = require('cors');
 var path = require('path');
 
@@ -47,6 +47,6 @@ if (process.env.NODE_ENV === 'production') {
 const port = process.env.PORT || 5005;
 app.listen(port, () => {
   console.log(`Baanda Utility Server listening at port ${port}`);
-  logMsg = { type: "server", domain: "startup", msg: `** Server BabiMaDidiMeGeno listening at port ${port}` };
+  // logMsg = { type: "server", domain: "startup", msg: `** Server BabiMaDidiMeGeno listening at port ${port}` };
   // logger.info(JSON.stringify(logMsg));
 });
