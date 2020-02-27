@@ -21,6 +21,9 @@ const changePassword = require('../routes/myaccount/changePassword');
 const getPriceOfService = require('../routes/myaccount/getPriceOfService');
 const getProfile = require('../routes/myaccount/getProfile');
 
+// Logger for database
+const log = require('../routes/logs/log');
+
 
 // Architecture & security
 const getFunctionsOfRole = require('../routes/architecture/getFunctionsOfRole');
@@ -51,6 +54,11 @@ module.exports = function(app) {
   
   // Archtecture & security
   app.use('/routes/architecture/getFunctionsOfRole', getFunctionsOfRole);
+
+
+   // Log in server
+   app.use('/routes/logs/log', log);
+   
 
   // API for testing features -- remove  from production
   app.use('/routes/tests/testprocget', testprocget);
